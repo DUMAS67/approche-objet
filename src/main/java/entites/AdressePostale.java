@@ -15,5 +15,7 @@ public class AdressePostale {
 		this.codePostal = codePostal;
 		this.ville = ville;
 	}
+	
+	
 
 }
