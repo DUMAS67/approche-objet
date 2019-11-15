@@ -3,10 +3,10 @@ package fr.diginamic.banque.entites;
 public class Compte {
 	
 	private String numeroCompte;
-	private String soldeCompte;
+	private int soldeCompte;
 	
 	
-	public Compte(String numeroCompte, String soldeCompte) {
+	public Compte(String numeroCompte, int soldeCompte) {
 		this.numeroCompte = numeroCompte;
 		this.soldeCompte = soldeCompte;
 	}
@@ -25,12 +25,12 @@ public class Compte {
 	}
 
 
-	public String getSoldeCompte() {
+	public int getSoldeCompte() {
 		return soldeCompte;
 	}
 
 
-	public void setSoldeCompte(String soldeCompte) {
+	public void setSoldeCompte(int soldeCompte) {
 		this.soldeCompte = soldeCompte;
 	}
 

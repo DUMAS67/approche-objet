@@ -5,7 +5,7 @@ public class CompteTaux extends Compte {
 
 	private double tauxDeRemuneration;
 
-	public CompteTaux(String numeroCompte, String soldeCompte, double tauxDeRemuneration) {
+	public CompteTaux(String numeroCompte, int soldeCompte, double tauxDeRemuneration) {
 		super(numeroCompte, soldeCompte);
 		this.tauxDeRemuneration = tauxDeRemuneration;
 		
