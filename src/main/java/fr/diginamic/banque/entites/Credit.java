@@ -5,10 +5,10 @@ package fr.diginamic.banque.entites;
 public class Credit extends Operation {
 
 	String dateCredit;
-	int montantCredit;
+	double montantCredit;
 	final String type = "Credit";
 	
-	public Credit(String dateCredit, int montantCredit){
+	public Credit(String dateCredit, double montantCredit){
 	super(dateCredit,montantCredit);
 	}
 
@@ -17,11 +17,11 @@ public class Credit extends Operation {
 		
 	}
 
-	public int getMontantCredit() {
+	public double getMontantCredit() {
 		return montantCredit;
 	}
 
-	public void setMontantCredit(int montantCredit) {
+	public void setMontantCredit(double montantCredit) {
 		this.montantCredit = montantCredit;
 	}
 
@@ -33,5 +33,11 @@ public class Credit extends Operation {
 	String afficherType() {
 		// TODO Auto-generated method stub
 		return type;
+	}
+
+	@Override
+	String getTypeOperation() {
+		// TODO Auto-generated method stub
+		return "Credit";
 	}
 }

@@ -2,10 +2,10 @@ package fr.diginamic.banque.entites;
 
 public class Debit extends Operation{
 	String dateDebit;
-	int montantDebit;
+	double montantDebit;
 	final String type = "Debit";
 	
-	public Debit(String dateDebit, int montantDebit){
+	public Debit(String dateDebit, double montantDebit){
 		super(dateDebit,montantDebit);
 		
 		}
@@ -18,11 +18,11 @@ public class Debit extends Operation{
 		this.dateDebit = dateDebit;
 	}
 
-	public int getMontantDebit() {
+	public double getMontantDebit() {
 		return montantDebit;
 	}
 
-	public void setMontantDebit(int montantDebit) {
+	public void setMontantDebit(double montantDebit) {
 		this.montantDebit = montantDebit;
 	}
 
@@ -30,6 +30,12 @@ public class Debit extends Operation{
 	String afficherType() {
 		// TODO Auto-generated method stub
 		return type;
+	}
+
+	@Override
+	String getTypeOperation() {
+		// TODO Auto-generated method stub
+		return "Debit";
 	}
 
 	

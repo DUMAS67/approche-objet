@@ -3,14 +3,15 @@ package fr.diginamic.banque.entites;
 public abstract class Operation {
 
 	private String dateOperation;
-	private int montantOperation;
+	private double montantOperation;
 	
-	public Operation(String date, int montant) {
+	public Operation(String date, double montant) {
 		this.dateOperation = date;
 		this.montantOperation = montant;
 	}
 	
 	abstract String afficherType();
+	abstract String getTypeOperation();
 		
 	public String toString(){
 		return afficherType() +" "+dateOperation+" "+ montantOperation;
@@ -23,11 +24,11 @@ public abstract class Operation {
 		this.dateOperation = dateOperation;
 	}
 
-	public int getMontantOperation() {
+	public double getMontantOperation() {
 		return montantOperation;
 	}
 
-	public void setMontantOperation(int montantOperation) {
+	public void setMontantOperation(double montantOperation) {
 		this.montantOperation = montantOperation;
 	}
 	
