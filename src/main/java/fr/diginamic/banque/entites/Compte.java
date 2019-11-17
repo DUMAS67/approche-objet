@@ -2,10 +2,18 @@ package fr.diginamic.banque.entites;
 
 public class Compte {
 
+	public Compte(String numeroCompte, double soldeInitial, int type) {
+		super();
+		this.numeroCompte = numeroCompte;
+		this.soldeInitial = soldeInitial;
+		this.type = type;
+	}
+
 	private String numeroCompte;
 	private double soldeInitial;
 	private Operation[] tableauOperation = new Operation[1];
 	private int nbOperation = 0;
+	private int type;
 
 	public Compte(String numeroCompte, double soldeInitial) {
 		this.numeroCompte = numeroCompte;
