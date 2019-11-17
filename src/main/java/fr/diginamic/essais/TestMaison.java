@@ -1,6 +1,6 @@
 package fr.diginamic.essais;
 
-import fr.dinamic.maison.*;
+import fr.diginamic.maison.*;
 
 public class TestMaison {
 
