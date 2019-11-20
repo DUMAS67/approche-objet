@@ -1,24 +1,45 @@
+
+
 package fr.diginamic.banque.entites;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
 
 public class Compte {
 
+	String numeroCompte;
+	double soldeInitial;
+	int type;
+	Operation[] tableauOperation;
+	int nbOperation = 0;
+
+	@Override
+	public boolean equals(Object arg0) {
+if (!(arg0 instanceof Compte)) {
+	return false;
+	}
+		Compte test = (Compte) arg0;
+		/*boolean testCompte = (this.numeroCompte == test.getNumeroCompte()) && (this.soldeInitial == test.getsoldeInitial());
+		if (testCompte) {
+			return true;
+		} else
+			return false;*/
+		boolean eq1 = new EqualsBuilder().append(this.numeroCompte, test.getNumeroCompte()).isEquals();
+		
+		boolean eq2 = new EqualsBuilder().append(this.soldeInitial, test.getsoldeInitial()).isEquals();
+		boolean eq3 = new EqualsBuilder().append(eq1, eq2).isEquals();
+		return (eq3);
+		
+	}
+
 	public Compte(String numeroCompte, double soldeInitial, int type) {
-		super();
 		this.numeroCompte = numeroCompte;
 		this.soldeInitial = soldeInitial;
 		this.type = type;
 	}
 
-	private String numeroCompte;
-	private double soldeInitial;
-	private Operation[] tableauOperation = new Operation[1];
-	private int nbOperation = 0;
-	private int type;
-
 	public Compte(String numeroCompte, double soldeInitial) {
 		this.numeroCompte = numeroCompte;
 		this.soldeInitial = soldeInitial;
-		this.tableauOperation = tableauOperation;
 	}
 
 	public Operation[] getTableauOperation() {
@@ -52,7 +73,7 @@ public class Compte {
 		double soldeOperationTotale = getsoldeInitial();
 
 		for (int i = 0; i < tableauOperation.length; i++) {
-			if (tableauOperation[i].getTypeOperation().equals("Credit")) {
+			if (tableauOperation[i].getTypeOperation()=="Credit") {
 				soldeOperationTotale += tableauOperation[i].getMontantOperation();
 
 			} else {
