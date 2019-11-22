@@ -13,9 +13,9 @@ public class LectureFichier {
 			List<String> lignes = FileUtils.readLines(fichierRecensement, "UTF-8");
 			
 			for ( String ligne :lignes){
-				System.out.println("Nombre de lignes : " +ligne);
+				System.out.println(ligne);
 			}
-			System.out.println(lignes.size());
+			System.out.println("Nombre de lignes : " +lignes.size());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
