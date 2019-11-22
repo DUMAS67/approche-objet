@@ -11,11 +11,11 @@ public class LectureFichier {
 		try {
 			File fichierRecensement = new File("C:/tempsts/recensement_population_2016.CSV");
 			List<String> lignes = FileUtils.readLines(fichierRecensement, "UTF-8");
-			
-			for ( String ligne :lignes){
+
+			for (String ligne : lignes) {
 				System.out.println(ligne);
 			}
-			System.out.println("Nombre de lignes : " +lignes.size());
+			System.out.println("Nombre de lignes : " + lignes.size());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
