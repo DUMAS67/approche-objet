@@ -22,6 +22,13 @@ System.out.println("Contenu des enumerations de saisons");
 		System.out.println("Trouver par un libelle une instance : " + libelle);
 	
 		Saison.getInstance(libelle);
+		
+		// Trouver une instance à partir d'un numero d'ordre
+				int nOrdre = 2;
+				System.out.println("Trouver par un numero d'ordre une instance : " + nOrdre);
+			
+				Saison.getInstance(nOrdre);
+		
 		}
 		
 	
